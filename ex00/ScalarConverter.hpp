@@ -1,14 +1,19 @@
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
-class ScalarConverter {
-public:
-	ScalarConverter();											// Default constructor
-	ScalarConverter(const ScalarConverter& src);				// Copy constructor
-	ScalarConverter& operator=(const ScalarConverter& rhs);	// Copy assignment operator
-	~ScalarConverter();											// Destructor
+#include <string>
+#include <iostream>
 
-private:
+class ScalarConverter {
+	private:
+		ScalarConverter();											// Default constructor
+		ScalarConverter(const ScalarConverter& src);				// Copy constructor
+		ScalarConverter& operator=(const ScalarConverter& rhs);		// Copy assignment operator
+		~ScalarConverter();											// Destructor
+
+	public:
+		static void	convert(const std::string& literal);
+
 	
 };
 
