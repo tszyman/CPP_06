@@ -2,6 +2,10 @@
 #include "Data.hpp"
 #include <iostream>
 
+#define RESET	"\033[0m"
+#define RED		"\033[31m"
+#define GREEN	"\033[32m"
+
 int main() {
 	Data myData;
 	myData.id = 42;
@@ -20,10 +24,10 @@ int main() {
 
 	// 3. Validation
 	if (ptr == &myData){
-		std::cout << "SUCCESS: The pointers match!" << std::endl;
+		std::cout << GREEN << "SUCCESS:" << RESET << " The pointers match!" << std::endl;
 		std::cout << "Data check: " << ptr->name << " (ID: " << ptr->id << ")" << std::endl;
 	} else {
-		std::cout << "FAILURE: The pointers do NOT match!" << std::endl;
+		std::cout << RED << "FAILURE:" << RESET << " The pointers do NOT match!" << std::endl;
 
 	}
 	return 0;
